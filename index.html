@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender Website</title>
+</head>
+<body>
+    
+    <style>
+        #pageDropdown{
+            position: absolute;
+            top:234px;
+            left:740px;
+            background-color: aqua;
+            font-size: 34px;
+
+        }
+        #sel{
+            position: absolute;
+            top:200px;
+            left:500px;
+            font-size: 34px;
+        }
+    </style>
+
+    <p id="sel">Select month</p>
+    <select id="pageDropdown" onchange="redirectToPage()">
+        <option value="">Select...</option>
+        <option value="https://printabletree.com/wp-content/uploads/January-2024-Floral-Calendar-Printable-1000x600.png">January 2024</option>
+        <option value="https://printabletree.com/wp-content/uploads/February-2024-Calendar-Printable-1170x600.png">February 2024</option>
+        <option value="https://printabletree.com/wp-content/uploads/March-2024-Floral-Calendar-Printable.png">March 2024</option>
+    </select>
+
+    <script>
+        function redirectToPage() {
+            // Get the selected value from the dropdown
+            var selectedPage = document.getElementById("pageDropdown").value;
+
+            // Redirect to the selected page
+            if (selectedPage) {
+                window.location.href = selectedPage;
+            }
+        }
+    </script>
+
+</body>
+</html>
